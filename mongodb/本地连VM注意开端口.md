@@ -1,0 +1,2 @@
+- /sbin/iptables -I INPUT -p tcp --dport 27017 -j ACCEPT
+- iptables -F
