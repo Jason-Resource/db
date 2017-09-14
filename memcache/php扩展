@@ -8,6 +8,7 @@ yum -y install zlib zlib-devel
 
 
 安装 libmemcached
+链接：http://pan.baidu.com/s/1gfnbdsB 密码：vmxr
 1.	tar zxvf libmemcached-1.0.18.tar.gz
 2.	cd libmemcached-1.0.18
 3.	./configure --prefix=/usr/local/libmemcached --with-memcached
@@ -15,6 +16,7 @@ yum -y install zlib zlib-devel
 
 
 安装PHP的memcached 扩展
+链接：http://pan.baidu.com/s/1jIgjwpw 密码：khjk
 1.	tar zxvf memcached-2.2.0.tgz
 2.	cd memcached-2.2.0
 3.	/usr/local/php/bin/phpize 【这里是php的安装目录】
