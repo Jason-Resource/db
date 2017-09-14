@@ -1,0 +1,30 @@
+string类型的field和value的映射表
+当表使用
+特别适用于存储对象
+
+
+hset user:1 name meinvbingyue
+
+hsetnx user:1 name jason		如果存在则不覆盖
+
+hmset user:1 name jason age 30		批量设置
+
+hget uesr:1 name
+
+hmget user:1 name age			获取所有值
+
+hkeys user:1				返回所有字段
+
+hvals user:1				返回所有字段值
+
+hgetall user:1				返回所字段和字段值
+
+hincrby user:1 age 5			增加5
+
+hexists user:1 age			是否存在
+
+hlen user:1				返回字段数
+
+hdel user:1 age				删除字段
+
+
