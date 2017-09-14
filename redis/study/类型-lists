@@ -1,0 +1,29 @@
+双向链表结构（头部或尾部添加删除元素）
+即可作为栈、又可作为队列
+push/pop、获取一个范围内的值
+
+
+lpush list1 "world"			从头部压入一个元素，返回元素个数
+
+rpush list1 "world"			从尾部压入一个元素，返回元素个数
+
+lrange list1 0 -1			从头部第一个元素到尾部的第一个元素取，既取全部数据，头部第一个下标为0
+
+linsert list1 before "world" "hello"	从world前面插入hello，指向头的方向为前面
+
+lset list1 0 "world"			设置指定下标的值
+
+lrem list1 3 "one"			删除3个跟"one"相同的元素，返回删除的个数(n<0从尾删除、n=0全部删除、n>0从头删除)
+
+ltrim list1 1 4				保留指定范围内的数据（这里案例中的意思是，除了下标为1到4的元素外，其他的都删除）
+ltrim list1 1 -1			保留从下标1开始，一直到尾部的数据
+
+lpop list1				从头部删除元素，返回删除的元素
+
+rpop list1				从尾部删除元素
+
+rpoplpush list1 list2			从第一个list尾部弹出，压入到第二个list的头部
+
+lindex list1 0				返回下标位置的元素
+
+llen list1				返回list元素个数
