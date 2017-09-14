@@ -1,0 +1,34 @@
+有序集合
+是set的一个升级版本，在set基础上增加了一个顺序属性
+可以理解为两列的表，一列存value，一列存顺序
+
+注意：顺序跟下标是不同的
+
+zadd zset1 1 "one"			设置zset1的一个元素one，序号为1
+zadd zset1 2 "one"			只更新顺序，值不变
+
+zrange zset1 0 -1			获取第1个下标到最后一个下标的数据
+zrange zset1 0 -1 withscores		输出顺序(withscores)
+
+zrevrange zset1 0 -1 withscores		顺序号从大到小排序，然后输出
+
+zrangebyscore zset1 2 3 withscores	先按顺序号从小到大排序，然后取顺序号2到3之间的数据
+
+zcount zset1 2 3			获取顺序号2到3之间元素的数量
+
+zcard zset1				获取集合中所有元素的个数
+
+zrem zset1 "one"			删除one元素
+	
+zremrangebyrank zset1 2 3		先按顺序号从大到小排序，然后删除下标2到3之间的元素
+
+zremrangebyscore zset1 2 3		先按顺序号从大到小排序，然后删除顺序号2到3之间的元素
+
+zincrby zset1 2 "one"			对one元素的顺序增加2（如果之前值是1，则通过设置则变为3）
+zincrby zset1 -2 "one"
+
+zadd zset1 2 "one"
+zrank zset1 "one"			获取one元素的下标（索引值），虽然one的顺序号为2，但是他的下标是0，						所以返回0；注意，执行这个函数会先按顺序号从小到大进行排序
+
+zrevrank zset1 "one"			跟上面一样呢，不同是按顺序号从大到小先排序
+
