@@ -1,0 +1,15 @@
+发布订阅（pub/sub）
+
+可以做成消息系统，web聊天系统
+
+
+cli-1
+subscribe tv1		监听tv1通道
+
+
+cli-2
+subscribe tv1 tv2	监听tv1/tv2通道
+
+
+cli-3
+publish tv1 "hello"	向tv1通道广播消息，返回监听数
