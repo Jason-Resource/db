@@ -1,0 +1,29 @@
+特点
+1、master可以拥有多个slave
+2、slave除了可以连接到master外，还可以连接到其他slave（目的是当master宕机后，某个slave可以立马升级为master）
+3、主从复制不会阻塞master，在同步数据时，master可以继续处理client请求
+4、提高系统伸缩性
+
+过程
+1、slave与master建立连接，发送sync同步命令
+2、master会启动一个后台进程，将数据库快照保存到文件中，同时master主进程会开始收集新的写命令并缓存
+3、后台完成保存后，就将此文件发送给slave
+4、slave将此文件保存到硬盘上
+
+配置
+在slave服务器，加入以下配置：
+slaveof		192.168.1.2 6379	#指定master的ip和端口
+masterauth	jason7862102		#master密码
+
+查看主从
+输入info命令
+查看role选项（角色）
+
+主：
+role:master
+slave0:192.168.1.2,6379,online
+
+从：
+role:slave
+master_link_status:up
+
