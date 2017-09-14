@@ -1,0 +1,17 @@
+两种方式：
+1、snapshotting（快照）也是默认方式，默认文件名dump.rdb
+2、Append-only file（aof）将每一个收到的写命令都通过write函数追加到文件中
+
+
+
+
+snapshotting：
+save 900 1		900秒内超过1个KEY被修改，则发起快照保存
+
+
+
+aof： 
+appendonly	yes		启用AOF持久化方式
+appendfsync	always		收到写命令立即写入磁盘，效率最慢，但保证完全的持久化
+		everysec	每秒写入一次磁盘，在性能和持久化做了很好的折中
+		no		完全依赖OS，性能最好，持久化没有保证
