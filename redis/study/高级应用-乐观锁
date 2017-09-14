@@ -1,0 +1,15 @@
+相当于版本控制器
+
+
+watch age	监控age键是否修改，如果在调用watch后值发生过变化，则事务不会执行成功
+
+multi
+
+set age
+
+exec
+
+
+===============================
+可以使用watch监控多个key
+unwatch age
