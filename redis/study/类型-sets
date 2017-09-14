@@ -1,0 +1,36 @@
+string类型的无序集合
+通过hash table实现
+并集、差集、交集		set1{1,2} set2{2,3} 并集是{1,2,3}；差集是{1}或{3}；交集是{2}
+好友推荐(差集)、标签tag功能
+
+
+
+
+sadd set1 "one"			注意：添加相同value不会成功
+
+srem set1 "one"			删除元素
+
+smembers set1			查看集合
+
+spop set1 "one"			随机返回并删除一个元素
+
+srandmember set1		随机返回set1的一个元素
+
+smove set1 set2 "one"		将set1的one剪切到set2中
+
+scard set1			查看set1元素个数
+
+sismember set1 "one"		检查one是否为set1的元素
+
+sdiff set1 set2			返回set1与set2的差集，以set1为标准（ set1{one two} set2{one three} 结果是{two} ）
+
+sdiffstore set3 set1 set2	将差集存储在set3
+
+sinter set1 set2		返回set1与set2的交集（ set1{one two} set2{one three} 结果是{one} ）
+
+sinterstore set3 set1 set2	将交集存储在set3
+
+sunion set1 set2		返回set1与set2的并集（ set1{one two} set2{one three} 结果是{one two three} ）
+
+sunionstore set3 set1 set2	将并集存储在set3
+
