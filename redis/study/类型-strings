@@ -1,0 +1,35 @@
+二进制安全
+可以存储任何数据（图片、序列化对象）
+
+set username meinvbingyue
+
+get username
+
+getset username jason		获取旧值，设置新值
+
+setnx username jason		如果key已经存在，则返回0，既不覆盖；如果不存在则设置；nx意为not exist（不存在）
+
+setex username 10 jason		设置一个10秒的键值，超时返回nil
+
+setrange email 6 gmail.com	设置name的值，从第6个下标开始，替换为gmail.com（替换的字符串如果没有原字符串长，则剩余的不会替换掉）
+
+getrange name 0 5		返回从0下标开始，取5个长度的数据
+
+mset user meinvbingyue age 30	批量设置
+
+mget user age			批量获取
+
+msetnx user jason age 21	批量设置，但不会覆盖已经存在的key；一个键没设置成功，则所有都不会设置成功
+
+incr age			递增数据，每次增加1，没有则默认为1
+
+incrby age 10			自增指定值
+incrby age -10
+
+decr age			自减数据，每次减少1
+
+decrby age 10			自减指定值
+
+append name goodman		追加value
+
+strlen name			获取长度
