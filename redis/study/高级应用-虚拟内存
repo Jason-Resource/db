@@ -1,0 +1,11 @@
+将暂时不经常访问的数据从内存交换到磁盘中
+
+redis.conf
+
+really-use-vm	yes		确定使用VM（手工写）
+vm-enabled	yes		开启VM功能
+vm-swap-file	/tmp/redis.swap 交换出来的value保存的文件路径
+vm-max-memory	1000000		使用的最大内存上限
+vm-page-size	32		每个页面的大小32字节
+vm-pages	134217728	最多使用多少页面	
+vm-max-threads	4		工作线程数量
