@@ -1,0 +1,40 @@
+keys *			返回所有键
+keys my*
+
+exists age		确认age键是否存在
+
+del age			删除age键
+
+ttl age			查看age键有效时长
+
+expire age 10		设置age键10秒后过期
+
+persist age		移除age键的过期时间
+
+select 0		选择0数据库（0-15，总共16个数据库）
+select 1		选择1数据库
+
+dbsize			返回当前数据库键数
+
+move age 1		将age键从当前数据库转移到1数据库中
+
+randomkey		随机返回一个键
+
+rename age age_new	将age键重命名为age_new键
+
+type age		返回age键数据类型
+
+ping			测试连接是否存活（有连接则返回PONG）
+
+echo meinvbingyue	输出一些内容
+
+quit			退出连接
+
+info			获取服务器信息
+
+config get *		返回所有配置参数值
+config get dir		获取dir参数的值
+
+flushdb			删除当前数据库的所有key
+
+flushall		删除所有数据库里的所有key
