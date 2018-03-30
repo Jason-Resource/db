@@ -1,3 +1,9 @@
+- libmemcached-1.0.18.tar.gz
+    * 链接：https://pan.baidu.com/s/166uLjFtISRSFDPswGSoikg 密码：i4pd
+
+- memcached-2.2.0.tgz
+    * 链接：https://pan.baidu.com/s/1oDAOV0mv_trNId_jyvO6zw 密码：hrqg
+    
 ```
 http://pecl.php.net/package/memcache
 
