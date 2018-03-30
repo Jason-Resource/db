@@ -13,4 +13,4 @@
 ### http://php.net/manual/zh/book.memcached.php
 
 ----
-(http://note.youdao.com/noteshare?id=ae5888568cd330d337098ec61d933bcd)[安装memcached和php扩展] 
+[安装memcached和php扩展] (http://note.youdao.com/noteshare?id=ae5888568cd330d337098ec61d933bcd)
