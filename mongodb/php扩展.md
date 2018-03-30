@@ -1,3 +1,5 @@
+- [相关扩展文件，密码：uug2](https://pan.baidu.com/s/1ejj1-uXKEsGiNcgeKPsDGg)
+  
 ```
 http://php.net/manual/zh/mongodb.installation.php
 
@@ -19,11 +21,10 @@ extension=mongodb.so				##### 也可以指定完整路径：extension=/usr/local
 phpinfo()检查是否加载成功
 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------
-写个文件测试一下
+```
 
-<?php
-
+- 写个文件测试一下
+```php
 try {
 
 	//服务器状态
@@ -59,6 +60,4 @@ try {
     echo "In file:", $e->getFile(), "\n";
     echo "On line:", $e->getLine(), "\n";       
 }
-    
-?>
 ```
