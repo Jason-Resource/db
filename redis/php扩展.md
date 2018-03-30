@@ -1,3 +1,4 @@
+```
 扩展包下载
 http://pecl.php.net/package/redis
 
@@ -34,3 +35,4 @@ echo $redis->GET('name');
 
 使用文档
 https://github.com/phpredis/phpredis/#readme
+```
