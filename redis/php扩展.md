@@ -1,3 +1,5 @@
+- [扩展下载，密码：5ial](https://pan.baidu.com/s/1jz1mjQ9XSugmDTYPVli89w)
+
 ```
 扩展包下载
 http://pecl.php.net/package/redis
