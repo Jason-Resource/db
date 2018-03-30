@@ -1,3 +1,4 @@
+```
 http://pecl.php.net/package/memcache
 
 注意：php7可能会有问题
@@ -44,3 +45,4 @@ echo $get_value;
 
 更多操作，请查看官方文档:
 http://php.net/manual/zh/book.memcached.php
+```
