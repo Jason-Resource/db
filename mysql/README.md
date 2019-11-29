@@ -11,6 +11,19 @@ WHERE
 	create_time < DATE_SUB( CURDATE(), INTERVAL 29 DAY )
 ```
 ----
+
+```sql
+# 必须要括号括起来，再查一次，才能关联其他表（把结果集转为中间表）
+select temp.* from (
+		select record.id,record.member_id,record.city from crm_record as record where member_id in (select a.member_id from 
+		(select member_id,max(create_time) max from crm_reply where member_id in (SELECT member_id FROM `crm_record` where status in (0,1,2)) and department_id=22 and member_id>0
+		GROUP BY member_id order by create_time desc) a where a.max<DATE_SUB(CURDATE(), INTERVAL 29 DAY) )
+) temp
+
+LEFT JOIN crm_contract as contract on contract.member_id=temp.member_id
+```
+----
+
 ```sql
 # 获取 当前日期、当前日期的周一的日期、当前日期的周日的日期
 select curdate(), date_sub(curdate(),interval WEEKDAY(curdate()) day) as first, date_sub(curdate(),interval WEEKDAY(curdate()) -6 day) as end;
