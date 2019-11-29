@@ -1,4 +1,17 @@
 ```sql
+# 获取30天前的日期 - 2019-10-31
+SELECT DATE_SUB(CURDATE(), INTERVAL 29 DAY) 
+
+# 获取创建时间是30天前的档案数据
+SELECT
+	* 
+FROM
+	crm_record 
+WHERE
+	create_time < DATE_SUB( CURDATE(), INTERVAL 29 DAY )
+```
+----
+```sql
 # 获取 当前日期、当前日期的周一的日期、当前日期的周日的日期
 select curdate(), date_sub(curdate(),interval WEEKDAY(curdate()) day) as first, date_sub(curdate(),interval WEEKDAY(curdate()) -6 day) as end;
 
