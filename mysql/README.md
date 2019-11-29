@@ -25,6 +25,17 @@ LEFT JOIN crm_contract as contract on contract.member_id=temp.member_id
 ----
 
 ```sql
+select id,name,(case 
+    when client_level=1 then '选址客户'  
+    when client_level=2 then '开业客户'  
+    when client_level=3 then '统采客户'
+    else client_level end) AS 五段客户 
+from crm_record where 1
+```
+
+----
+
+```sql
 # 获取 当前日期、当前日期的周一的日期、当前日期的周日的日期
 select curdate(), date_sub(curdate(),interval WEEKDAY(curdate()) day) as first, date_sub(curdate(),interval WEEKDAY(curdate()) -6 day) as end;
 
